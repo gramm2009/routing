@@ -1,17 +1,17 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
 
-import NotFound from "../modules/pages/404";
-import Contacts from '../modules/pages/contacts';
-import Home from '../modules/pages/home';
-import Info from '../modules/pages/info';
+import NotFound from "../project/pages/404";
+import Contacts from '../project/pages/contacts';
+import Home from '../project/pages/home';
+import Info from '../project/pages/info';
 
 export const useRouters = ( status: boolean ) => {
     if ( status = true ) {
         return (
             <Switch>
-                <Route exact path="/home" component={ Home } />
-                <Route exact path="/info" component={ Info } />
-                <Route exact path="/contacts" component={ Contacts } />
+                <Route exact  path="/info" component={ Info } />
+                <Route   path="/contacts" component={ Contacts } />
+                <Route exact  path="/" component={ Home } />
                 <Route component={ NotFound } />
             </Switch>
         );

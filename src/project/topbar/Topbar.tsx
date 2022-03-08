@@ -10,7 +10,7 @@ const Topbar = () => {
 
     return <div className="topbar">
         <ul className='topbar__nav'>
-            <li><Link to="/home">Главная</Link></li>
+            <li><Link to="/">Главная</Link></li>
             <li><Link to ="/info">О нас</Link></li>
             <li><Link to="/contacts">Контакты</Link></li>
 

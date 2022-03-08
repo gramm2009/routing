@@ -1,8 +1,9 @@
 const axios = require( 'axios' ).default
 
 import { useCallback, useEffect, useMemo, useState, memo } from 'react';
+import { Link, useRouteMatch } from 'react-router-dom';
 import './app.scss';
-import Topbar from './modules/topbar';
+import Topbar from './project/topbar';
 import { useRouters } from "./router/Routers"
 
 export const App: React.FC = () => {
@@ -14,10 +15,7 @@ export const App: React.FC = () => {
 			<div className="app__container">
 				<Topbar />
 				<div className='app__body'>
-					<nav className='nav'>
-						вложенный роутинг
-					</nav>
-					<div className="content">{ Router }</div>
+				{ Router }
 				</div>
 			</div>
 		</div>
